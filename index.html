@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>دراسة الفلسفة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">🦉</div>
+      <span class="logo-text">الفلسفة</span>
+    </div>
+    <div class="search-btn" onclick="openSearch()">🔍</div>
+  </div>
+</header>
+
+<div class="search-overlay" id="searchOverlay" onclick="overlayClick(event)">
+  <div class="search-box">
+    <input class="search-input" id="searchInput" placeholder="ابحث عن موضوع..." oninput="doSearch(this.value)"/>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-eyebrow">✦ مرحباً بك</div>
+  <h1 class="hero-title">استكشف عالم<br/><span>الفلسفة</span></h1>
+  <p class="hero-sub">رحلة فكرية عبر أعمق أسئلة الوجود والمعرفة والأخلاق</p>
+  <div class="stats-row">
+    <div class="stat"><span class="stat-num" id="statTopics">٨</span><div class="stat-label">محاور</div></div>
+    <div class="stat"><span class="stat-num">٤٠+</span><div class="stat-label">فيلسوف</div></div>
+    <div class="stat"><span class="stat-num">٢٥٠٠</span><div class="stat-label">سنة تاريخ</div></div>
+  </div>
+</section>
+
+<div class="sec-header">
+  <span class="sec-title">المحاور الرئيسية</span>
+  <div class="sec-line"></div>
+</div>
+
+<div class="cards" id="topicCards"></div>
+<div class="spacer"></div>
+
+<nav class="bottom-nav">
+  <div class="nav-inner">
+    <button class="nav-btn active"><span class="nav-btn-icon">🏠</span><span class="nav-btn-label">الرئيسية</span></button>
+    <button class="nav-btn"><span class="nav-btn-icon">📚</span><span class="nav-btn-label">المواضيع</span></button>
+    <button class="nav-btn"><span class="nav-btn-icon">📝</span><span class="nav-btn-label">ملاحظاتي</span></button>
+    <button class="nav-btn"><span class="nav-btn-icon">👤</span><span class="nav-btn-label">حسابي</span></button>
+  </div>
+</nav>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

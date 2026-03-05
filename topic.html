@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>موضوع</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="back-btn" onclick="window.location.href='index.html'">▶</div>
+    <div class="header-title" id="headerTitle">تحميل...</div>
+    <div class="header-spacer"></div>
+  </div>
+</header>
+
+<div class="tabs" id="tabsBar">
+  <button class="tab active" onclick="switchTab('overview',this)">نظرة عامة</button>
+  <button class="tab" onclick="switchTab('chapters',this)">الفصول</button>
+  <button class="tab" onclick="switchTab('philosophers',this)">الفلاسفة</button>
+  <button class="tab" onclick="switchTab('concepts',this)">المفاهيم</button>
+  <button class="tab" onclick="switchTab('quiz',this)">اختبار</button>
+</div>
+
+<div class="content">
+  <div class="tab-pane active" id="pane-overview"></div>
+  <div class="tab-pane" id="pane-chapters"></div>
+  <div class="tab-pane" id="pane-philosophers"></div>
+  <div class="tab-pane" id="pane-concepts"></div>
+  <div class="tab-pane" id="pane-quiz"></div>
+</div>
+<div class="spacer"></div>
+
+<!-- LESSON MODAL -->
+<div class="lesson-modal" id="lessonModal">
+  <div class="modal-header">
+    <div class="modal-header-inner">
+      <div class="back-btn" onclick="closeLesson()">▶</div>
+      <div class="header-title" id="modalHeaderTitle"></div>
+      <div class="header-spacer"></div>
+    </div>
+  </div>
+  <div class="modal-content" id="lessonContent"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="topic.js"></script>
+</body>
+</html>
